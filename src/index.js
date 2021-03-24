@@ -11,14 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => { addImageElements(data) })
 
     function addImageElements(images) {
-        // debugger
         const imageURLs = images['message']
         const container = document.getElementById('dog-image-container')
         imageURLs.forEach( image => {
-            // debugger
             let li = document.createElement('li')
             li.innerHTML = `<img src=${image}>`
-            // debugger
             container.append(li) 
         })
     }
